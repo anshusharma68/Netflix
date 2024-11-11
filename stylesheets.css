@@ -1,0 +1,474 @@
+
+.wrapper {
+  width: 100%;
+  max-width: 1400px; /* Maximum width for the container */
+  margin: 0 auto; /* Centers the container horizontally */
+  padding: 0 20px; /* Adds padding on left and right sides */
+}
+
+
+.header1 {
+  display: flex; /* Use flex instead of inline-flex */
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px; /* Add padding for spacing */
+  width: 100%; /* Ensure full-width alignment */
+  background-color: #141414; /* Optional: keeps a Netflix-like background */
+  box-sizing: border-box; /* Ensures padding doesn’t affect width */
+}
+
+.galleryscroll {
+    position: relative;
+    overflow: hidden;
+    width: 90%;
+    margin: auto;
+  }
+
+  .g-container {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+    gap: 10px;
+  }
+
+  .gallery-item {
+    flex: 0 0 auto;
+    width: 132px;
+    height: 184px;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    scroll-snap-align: start;
+    border-radius: 5px;
+  }
+
+
+  .gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+
+.header1 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background-color: #141414; /* Netflix-like dark background */
+}
+
+
+
+/* Netflix logo styling */
+.netflix-logo img {
+  width: 150px;
+  height: auto;
+  background: transparent; /* Ensure no background */
+  display: block; /* Removes any inline spacing issues */
+}
+
+/* Right buttons container styling */
+.right-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjust spacing between elements */
+}
+
+/* Language picker styling */
+.language-picker {
+  position: relative;
+}
+
+.language-button {
+  background-color: #292f35;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  border-radius: calc(100px - 0.0625rem);
+
+}
+
+.language-dropdown {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 120px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  z-index: 1;
+
+}
+
+.language-dropdown a {
+  color: black;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+.language-dropdown a:hover {
+  background-color: #f1f1f1;
+}
+
+.language-picker:hover .language-dropdown {
+  display: block;
+}
+
+/* Login button styling */
+.loginbttn .login-button {
+  background-color: #ffffff; /* Netflix red */
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 8px 16px;
+  border-width: 0.0625rem;
+  border-radius: calc(100px - 0.0625rem);
+  cursor: pointer;
+  font-size: 16px;
+}
+
+
+.right-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjust this value as needed for spacing */
+}
+
+
+body {
+  margin: 0 20px; /* Adds margin to the left and right side */
+  font-family: Arial, sans-serif;
+  color: white;
+  background-color: #141414;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.main-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh; /* Full screen height */
+  position: relative;
+  color: white;
+  box-sizing: border-box;
+}
+
+.background-box {
+  width: 80%; /* Adjust width */
+  height: 60%; /* Adjust height */
+  background: url('IN-en-20241104-TRIFECTA-perspective_5e478a9d-0baf-4a93-8987-7a8ebf6f7fe8_large.jpg') center center / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.background-box::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: #141414; /* Hide the curve edge */
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+h1 {
+  font-size: 3rem; /* Larger text size */
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+  z-index: 2;
+}
+
+p {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-top: 10px;
+  text-align: center;
+  z-index: 2;
+}
+
+
+
+.email-form {
+  margin-top: 40px;
+  margin-bottom: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.email-form input {
+  padding: 10px;
+  margin-right: 10px; /* Adds space between the input field and button */
+  border: 1px solid #ccc;
+  border-radius: 50px;
+  width: 300px; /* Adjust width as needed */
+  appearance: none;
+  background: transparent;
+}
+
+.email-form button {
+  padding: 10px 30px; /* Adjust padding for a wider button */
+  background-color: #e50914; /* Netflix red */
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+
+}
+
+.email-form button:hover {
+  background-color: #f40612;
+}
+
+.trending-heading {
+  font-family: 'Anton', sans-serif;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 100;
+  margin: 0; /* Remove any extra margin */
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Container to hold the boxes */
+.box-container {
+  display: flex; /* Align boxes in a row */
+  justify-content: space-between; /* Distribute boxes with equal space between them */
+  width: 100%; /* Full width of the container */
+  padding: 20px; /* Optional: Adds padding around the container */
+  box-sizing: border-box;
+}
+
+/* Style for each box */
+.box {
+  width: 23%; /* Increased width of each box (a bit larger than before) */
+  height: 100px; /* Increased height for the boxes */
+  background-color: #303030; /* Example background color */
+  color: white; /* Text color */
+  display: flex; /* Use flex to align the text */
+  flex-direction: column; /* Stack text elements vertically */
+  justify-content: flex-start; /* Align text to the top */
+  align-items: flex-start; /* Align text to the left */
+  padding: 20px; /* Add some padding for spacing inside the box */
+  border-radius: 20px; /* Optional: Add rounded corners */
+  text-align: left; /* Align text to the left */
+  margin: 10px;
+  font-size: 1.25rem; /* Make text a bit larger */
+  font-weight: 600; /* Make text bold */
+}
+
+.box h1, .box p {
+  margin: 0; /* Remove default margin */
+}
+
+
+/* ----------------faq-------------- */
+.faq{
+  padding: 10px 12%;
+  text-align: center;
+  font-size: 18px;
+}
+.faq h2{
+  font-weight: 500;
+  font-size: 40px;
+}
+
+.accordion{
+  margin: 60px auto;
+  width: 100%;
+  max-width: 750px;
+}
+.accordion li{
+  list-style: none;
+  width: 100%;
+  padding: 5px;
+}
+.accordion li label{
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  background: #303030;
+  margin-bottom: 2px;
+  cursor: pointer;
+  position: relative;
+}
+label::after{
+  content: '+';
+  font-size: 34px;
+  position: absolute;
+  right: 20px;
+  transition: transform 0.5s;
+}
+input[type="radio"]{
+  display: none;
+}
+.accordion .content{
+  background: #303030;
+  text-align: left;
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s, padding 0.5s;
+}
+.accordion input[type="radio"]:checked + label + .content{
+  max-height: 600px;
+  padding: 30px 20px;
+}
+.accordion input[type="radio"]:checked + label::after{
+  transform: rotate(135deg);
+}
+.faq .email-signup{
+  max-width: 600px;
+  margin: 20px auto 60px;
+}
+.faq small{
+  font-size: 13px;
+}
+
+/* ----------------footer----------------- */
+.footer{
+  padding: 50px 15% 10px;
+  border-top: 6px solid #333;
+  color: #777;
+}
+.footer h2{
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+.footer .col{
+  flex-basis: 25%;
+  flex-grow: 1;
+  margin-bottom: 20px;
+}
+.footer .col a{
+  display: block;
+  text-decoration: none;
+  color: #777;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+.footer .row{
+  align-items: flex-start;
+  padding: 10px 0;
+}
+.footer .language-btn{
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 3px;
+}
+.copyright-txt{
+  font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* ---------media-queries-for-small-screen-------- */
+@media only screen and (max-width: 600px){
+  .logo{
+      width: 100px;
+  }
+  nav button{
+      padding: 5px 10px;
+  }
+  nav .language-btn{
+      padding: 4px 8px;
+  }
+  .header-content{
+      position: unset;
+      transform: none;
+      padding-top: 150px;
+  }
+  .header-content h1{
+      font-size: 30px;
+  }
+  .email-signup button{
+      font-size: 12px;
+      padding: 10px 15px;
+  }
+  .text-col, .img-col{
+      flex-basis: 100%;
+  }
+  .features h2{
+      font-size: 30px;
+  }
+  .features p{
+      font-size: 15px;
+  }
+  .row:nth-child(2), .row:nth-child(4){
+      flex-direction: column-reverse;
+  }
+  .features .row{
+      padding: 10px 0;
+  }
+  .faq h2{
+      font-size: 20px;
+  }
+  .accordion .content{
+      font-size: 14px;
+  }
+  .accordion li label{
+      padding: 10px;
+      font-size: 14px;
+  }
+  label::after{
+      font-size: 22px;
+  }
+}
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+
+.language-btn{
+  display: inline-flex;
+  align-items: center;
+  background: transparent;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  padding: 7px 10px;
+}
+.language-btn img{
+  width: 10px;
+  margin-left: 10px;
+}
+
+
+
+.row{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 50px 0;
+}
